@@ -21,4 +21,9 @@ def categories(request):
     )
 
 def products(request):
-    productsList  = Product.objects.filter()
+    productsList  = Product.objects.filter(balance >= 1 ).order_by('price')
+    return render(
+    request,
+    'products.html',
+    {'productsList': productsList }
+    )

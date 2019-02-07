@@ -1,0 +1,19 @@
+{%extends "basic.html"%}
+
+{% block content %}
+
+<h2><p>Продукция</p></h2>
+
+{% if productsList%}
+<ul>
+
+  {% for product in productsList %}
+  <li>
+    {{ product.product_name }};
+  </li>
+  {% endfor %}
+
+</ul>
+{%endif%}
+
+{% endblock %}
