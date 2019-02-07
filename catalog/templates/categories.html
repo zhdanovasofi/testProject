@@ -7,13 +7,15 @@
 {% if categoriesList%}
 <ul>
 
-  {% for category in categoriesLists %}
+  {% for category in categoriesList %}
   <li>
-    {{ category.category_name }};
+    {{ category.category_name }}
   </li>
   {% endfor %}
 
 </ul>
+{%else%}
+Не добавлено
 {%endif%}
 
 {% endblock %}

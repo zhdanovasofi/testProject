@@ -5,7 +5,7 @@ class Category(models.Model):
     categoty_id = models.AutoField(primary_key = True)
     category_name = models.CharField(max_length = 20)
     def __str__(self):
-        return self.name
+        return self.category_name
 
 class Product(models.Model):
     product_id  = models.AutoField(primary_key=True)
@@ -14,4 +14,4 @@ class Product(models.Model):
     categoty_id = models.ForeignKey('Category', on_delete=models.CASCADE)
     balance = models.IntegerField(default=1)
     def __str__(self):
-        return product_name
+        return self.product_name

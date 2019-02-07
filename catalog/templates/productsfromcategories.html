@@ -1,0 +1,23 @@
+{%extends "basic.html"%}
+
+{% block content %}
+
+<h2><p>Товары из категории {{category}}</p></h2>
+
+{% if productsList%}
+<ul>
+
+  {% for product in productsList %}
+  <li>
+    Название : {{ product.product_name }} <br>
+    Цена: {{product.product_price}}<br>
+    Остаток на складе: {{product.balance}}
+  </li>
+  {% endfor %}
+
+</ul>
+{%else%}
+Не добавлено
+{%endif%}
+
+{% endblock %}
