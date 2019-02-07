@@ -1,0 +1,19 @@
+{%extends "main.html"%}
+
+{% block content %}
+
+<h2><p>Категории</p></h2>
+
+{% if categoriesList%}
+<ul>
+
+  {% for category in categoriesLists %}
+  <li>
+    {{ category.category_name }};
+  </li>
+  {% endfor %}
+
+</ul>
+{%endif%}
+
+{% endblock %}
