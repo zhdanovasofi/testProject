@@ -6,14 +6,15 @@
 
 {% if categoriesList%}
 <ul>
-
+  <div class="widget">
   {% for category in categoriesList %}
-  <li>
+<li><a href="">
     {{ category.category_name }}
-  </li>
+</a></li>
   {% endfor %}
-
+  </div>
 </ul>
+
 {%else%}
 Не добавлено
 {%endif%}

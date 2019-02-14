@@ -5,17 +5,20 @@
 <h2><p>Товары из категории {{category}}</p></h2>
 
 {% if productsList%}
-<ul>
-
   {% for product in productsList %}
-  <li>
-    Название : {{ product.product_name }} <br>
-    Цена: {{product.product_price}}<br>
-    Остаток на складе: {{product.balance}}
-  </li>
+  <div class="product-item">
+    <div class="product-list">
+    <h3>{{ product.product_name }}</h3>
+      <span class="price">{{product.product_price}}</span>
+    Остаток на складе: {{product.balance}}<br>
+      <a href="" class="button">В корзину</a>
+    </div>
+    </div>
   {% endfor %}
 
+
 </ul>
+
 {%else%}
 Не добавлено
 {%endif%}

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Product, Category
 import datetime
 from django.shortcuts import render_to_response
-
+from .forms import RegisterFormView
 def main(request):
     """
     Функция отображения для домашней страницы сайта.
